@@ -11,14 +11,17 @@ public class Main {
         //inputs from users
         System.out.println("enter the student id");
         int studentid=sc.nextInt();
+        sc.nextLine(); // consume the newline character
         System.out.println("enter the student name");
         String studentname=sc.nextLine();
         System.out.println("enter the student age");
         int age=sc.nextInt();
+        sc.nextLine(); // consume the newline character
         System.out.println("enter the student department");
         String department=sc.nextLine();
         System.out.println("number of subjects"); 
         int n=sc.nextInt();
+        sc.nextLine(); // consume the newline character
         int[] marks=new int[n];
         System.out.println("enter the marks of "+n+" subjects");
         for(int i=0;i<n;i++) {
