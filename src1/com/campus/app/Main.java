@@ -3,7 +3,7 @@ package com.campus.app;
 import java.util.Scanner;
 import com.campus.model.Student;
 import com.campus.service.StudentService;
-
+import com.campus.model.ScholarshipStudent;
 
 public class Main {
     public static void main(String[] args) {
@@ -29,7 +29,10 @@ public class Main {
             marks[i]=sc.nextInt();
             sc.nextLine();
         }
-        Student student = new Student(studentid, studentname, age, department, marks);
+        System.out.println("enter the scholarship percentage");
+        double scholarshipPercentage = sc.nextDouble();
+        sc.nextLine(); // consume the newline character
+        Student student = new ScholarshipStudent(studentid, studentname, age, department, marks, scholarshipPercentage);
         student.displayStudentInfo(true);
         Student.displayStudentCount();
         StudentService studentService = new StudentService();
